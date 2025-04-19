@@ -39,9 +39,7 @@ $$
 含有比例项、积分项和**微分项**的PID输出值：
 
 $$
-\begin{equation}\begin{split} 
 out(t) = K_p error(t) + K_i \int_0^t error(t)dt + K_d \frac{derror(t)}{dt}
-\end{split} \end{equation}
 $$
 
 微分项的输出取决于当前时刻误差的变化率，与当前时刻误差的变化趋势有关。微分项可以阻碍误差的急剧变化，增加系统阻尼。
@@ -57,16 +55,12 @@ $$
 离散形式：
 
 $$
-\begin{equation}\begin{split} 
 out(t) = K_p error(t) + K_i T \sum_{j=0}^t error(j) + K_d \frac{error(t) - error(t - 1)}{T}
-\end{split} \end{equation}
 $$
 
 离散形式简化：
 
 $$
-\begin{equation}\begin{split} 
 out(t) = K_p error(t) + K_i \sum_{j=0}^t error(j) + K_d (error(t) - error(t - 1))
-\end{split} \end{equation}
 $$
 
